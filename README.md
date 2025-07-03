@@ -1,6 +1,6 @@
 # Threads脆文篩選器
-感謝:
-hzbrrbmin,腳本直接使用這裡的版本修改而成
+感謝:  
+hzbrrbmin,腳本直接使用這裡的版本修改而成  
 https://greasyfork.org/zh-TW/scripts/533791-keyword-based-tweet-filtering-for-threads/code
 
 開發目標：打造一款PC端的脆文篩選器  
