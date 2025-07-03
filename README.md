@@ -1,4 +1,16 @@
 # Threads脆文篩選器
+開發目標：打造一款PC端的脆文篩選器  
+1.瀏覽器自動擷取脆文內容並傳送給 AI 模型分析。  
+2.AI判斷該脆文是否帶有憤怒情緒，並給予生氣程度的評分。  
+3.分析結果以文字形式回傳並顯示在瀏覽器上。  
+4.使用者可自行設定希望隱藏的「生氣程度」門檻。  
+5.系統依據設定，自動隱藏超過該門檻的脆文內容。  
+
+結果：  
+1.呼叫模型因網站CSP，需要使用者端啟動伺服器（node.js）  
+2.瀏覽脆文的速度不能太快，回應速度跟不上  
+3.同一脆文，AI的評分會忽高忽低，但還能接受  
+
 工具:  
 1.瀏覽器"竄改猴"外掛  
 https://www.tampermonkey.net/index.php  
@@ -18,4 +30,8 @@ npm install @google/genai mime express cors dotenv
 4.啟動伺服器  
 npm start  
 5.腳本匯入至竄改猴(Threads脆文篩選器-0.2.user.js)  
-6.打開Threads看結果  
+6.打開Threads和瀏覽器開發工具看結果  
+
+結果截圖:    
+<img src="screenshot/screenshot 2025-07-04 013656.png" alt="介面預覽" width="500"/>
+<img src="screenshot/screenshot 2025-07-04 013806.png" alt="介面預覽" width="500"/>
