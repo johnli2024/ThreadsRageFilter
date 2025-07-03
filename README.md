@@ -1,4 +1,8 @@
 # Threads脆文篩選器
+感謝:
+hzbrrbmin,腳本直接使用這裡的版本修改而成
+https://greasyfork.org/zh-TW/scripts/533791-keyword-based-tweet-filtering-for-threads/code
+
 開發目標：打造一款PC端的脆文篩選器  
 1.瀏覽器自動擷取脆文內容並傳送給 AI 模型分析。  
 2.AI判斷該脆文是否帶有憤怒情緒，並給予生氣程度的評分。  
