@@ -1,5 +1,4 @@
-# Threads-
-Threads脆文篩選器  
+# Threads脆文篩選器
 工具:  
 1.瀏覽器"竄改猴"外掛  
 https://www.tampermonkey.net/index.php  
