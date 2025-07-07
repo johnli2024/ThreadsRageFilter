@@ -13,7 +13,8 @@ https://greasyfork.org/zh-TW/scripts/533791-keyword-based-tweet-filtering-for-th
 結果：  
 1.呼叫模型因網站CSP，需要使用者端啟動伺服器（node.js）  
 2.瀏覽脆文的速度不能太快，回應速度跟不上  
-3.同一脆文，AI的評分會忽高忽低，但還能接受  
+3.同一脆文，AI的評分會忽高忽低，但還能接受
+4.AI模型分析要付費,請養成定時查看目前用量的習慣
 
 工具:  
 1.瀏覽器"竄改猴"外掛  
