@@ -49,7 +49,7 @@ app.post('/analyze-emotion', async (req, res) => {
       });
     }
 
-    const model = 'gemini-2.5-flash';
+    const model = 'gemini-2.0-flash-lite';
     const contents = [
       {
         role: 'user',
