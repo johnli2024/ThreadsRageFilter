@@ -32,6 +32,11 @@
         return container.querySelector('div.x1a6qonq.x6ikm8r.x10wlt62.xj0a0fe.x126k92a.x6prxxf.x7r5mf7');
     }
 
+    // 在推文主容器下的標籤
+    function getMainTagBlock(container) {
+        return container.querySelector('div.xeuugli span.x1lliihq.x1plvlek.xryxfnj.x1n2onr6.x1ji0vk5.x18bv5gf.x193iq5w.xeuugli.x1fj9vlw.x13faqbe.x1vvkbs.x1s928wv.xhkezso.x1gmr53x.x1cpjm7i.x1fgarty.x1943h6x.x1i0vuye.xjohtrz.x1s688f.xp07o12.x1yc453h');
+    }
+
 	//脆文內容傳送給AI模型分析
     const serverURL = 'http://localhost:3000/analyze-emotion';
     function analyzeComment(text, callback) {
@@ -73,13 +78,38 @@
 	//主程式
     function getMainText(){
         let containers = getAllPostContainers();
+        let blocks = ['罷免','借錢','瘡','大便','小草','鬼故事','四叉貓','民進黨','章魚嗶','崑萁','MuaChat','土城','藍白','耳屎','債務','拉屎','鍾明軒','鐘明軒','廣興橋','阿泰爾','莮','男蘿莉'
+                     ,'母胎單身戀愛','戀愛大作戰','單身大作戰','點進主頁連結','追蹤我','還沒睡','switch2','Switch 2','NS2','台電','徵才','漢光','吳恩碩','紅姐','光逝去的夏天','屁眼','蟑螂'
+                     ,'男同','阿紅','麥玉珍','Joeman','紅爺','自縊','楓之谷','會超順','紅姊','柯南','街口','柯文哲','砍預算','會考','秦始皇','男莖'];
         containers.forEach(container => {
             let mainTextBlock = getMainTextBlock(container);
             if (!mainTextBlock) return;
             if (mainTextBlock.classList.contains('my-class')) return;
+             mainTextBlock.classList.add('my-class');
             let mainText = mainTextBlock.textContent.replace(/\s+/g, ' ').trim();
+
             //console.log("主文:"+mainText);
-            mainTextBlock.classList.add('my-class');
+            for (let i = 0; i < blocks.length; i++) {
+                if (mainText.toLowerCase().includes(blocks[i].toLowerCase())) {
+                    console.log('主文含有敏感詞:', blocks[i], '|內容:',mainText);
+                    container.style.display = 'none';
+                    return;
+                }
+            }
+
+            let tagBlock = getMainTagBlock(container);
+            if (tagBlock) {
+                let tagText = tagBlock.textContent.replace(/\s+/g, ' ').trim();
+                //console.log("標籤:"+tagText);
+                for (let i = 0; i < blocks.length; i++) {
+                    if (tagText.toLowerCase().includes(blocks[i].toLowerCase())) {
+                        console.log('標籤含有敏感詞:', blocks[i], '|內容:',tagText);
+                        container.style.display = 'none';
+                        return;
+                    }
+                }
+            }
+
             analyzeComment(mainText, (result) => {
                 console.log('分析:', result.analysis, '|內容:',mainText);
                 insertAnalyzeResult(container,'分析:'+result.analysis);
