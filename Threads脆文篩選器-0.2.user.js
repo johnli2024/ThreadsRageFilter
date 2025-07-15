@@ -77,6 +77,10 @@
 
 	//主程式
     function getMainText(){
+	if (window.location.href !== 'https://www.threads.com/') {
+            console.log('目前不在首頁,暫停篩選器處理:'+window.location.href);
+            return;
+        }
         let containers = getAllPostContainers();
         let blocks = [
 		//'罷免','借錢','瘡','大便','小草','鬼故事','四叉貓','民進黨','章魚嗶','崑萁','MuaChat','土城','藍白','耳屎','債務','拉屎','鍾明軒','鐘明軒','廣興橋','阿泰爾','莮','男蘿莉'
