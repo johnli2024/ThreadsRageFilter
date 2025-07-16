@@ -13,8 +13,8 @@ https://greasyfork.org/zh-TW/scripts/533791-keyword-based-tweet-filtering-for-th
 敏感詞請至腳本內(let blocks段落處)新增  
 7.(7/17更新)新增敏感詞可使用正則表達式  
 正則表達式,請至腳本內(let blockPatterns段落處)新增  
-8.(7/17更新)新增帳號個人簡介篩選功能，帳號個人簡介若發現敏感詞，隱藏脆文內容  
-帳號個人簡介的敏感詞,請至腳本內(let bioBlocks段落處)新增  
+8.(7/17更新)新增個人頁面篩選功能，個人頁面若發現敏感詞，隱藏脆文內容  
+個人頁面的敏感詞,請至腳本內(let bioBlocks段落處)新增  
 
 微調:  
 1.(7/15更新)僅針對首頁的脆文做篩選器處理  
