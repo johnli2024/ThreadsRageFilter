@@ -34,7 +34,7 @@ https://nodejs.org/zh-tw/download
 3.一組Gemini api key  
 https://aistudio.google.com/apikey  
 
-操作步驟:  
+操作步驟:(沒有要使用AI模型的話可以直接跳到5)  
 1.下載node.js專案資料夾(gemini-emotion-server)  
 2.輸入Gemini api key  
 更新專案資料夾內的.env檔案  
